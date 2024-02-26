@@ -3,6 +3,15 @@
     padding: 0;
 }
 :root {
+    --text-color: rgb(6, 0, 42);
+    --background-img: linear-gradient(rgba(200,200,200,0.05), rgba(200,200,200,0.5)),url(./assets/top-of-the-rock.png);
+    --background-ul-li-a: rgba(200, 200, 255, 0.3);
+    --background-ul-li-a-border: rgba(200, 200, 255, 0.5);
+    --backdrop-blur: blur(1px);
+    --switch-img: url(./assets/moon-stars.svg);
+    --button-right: 0;
+}
+.light {
     --text-color: white;
     --background-img: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)),url(./assets/top-of-the-rock.png);
     /* background: rgba(200, 200, 255, 0.3); */
@@ -11,15 +20,6 @@
     --backdrop-blur: blur(4px);
     --switch-img: url(./assets/sun.svg);
     --button-right: 100;
-}
-.light {
-    --text-color: rgb(6, 0, 42);
-    --background-img: linear-gradient(rgba(200,200,200,0.05), rgba(200,200,200,0.5)),url(./assets/top-of-the-rock.png);
-    --background-ul-li-a: rgba(200, 200, 255, 0.3);
-    --background-ul-li-a-border: rgba(200, 200, 255, 0.5);
-    --backdrop-blur: blur(1px);
-    --switch-img: url(./assets/moon-stars.svg);
-    --button-right: 0;
 }
 body {
     /* background

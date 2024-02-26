@@ -1,0 +1,181 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+:root {
+    --text-color: white;
+    --background-img: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)),url(./assets/top-of-the-rock.png);
+    /* background: rgba(200, 200, 255, 0.3); */
+    --background-ul-li-a: rgba(1, 1, 95, 0.3);
+    --background-ul-li-a-border: rgba(120, 120, 255, 0.5);
+    --backdrop-blur: blur(4px);
+    --switch-img: url(./assets/sun.svg);
+    --button-right: 100;
+}
+.light {
+    --text-color: rgb(6, 0, 42);
+    --background-img: linear-gradient(rgba(200,200,200,0.05), rgba(200,200,200,0.5)),url(./assets/top-of-the-rock.png);
+    --background-ul-li-a: rgba(200, 200, 255, 0.3);
+    --background-ul-li-a-border: rgba(200, 200, 255, 0.5);
+    --backdrop-blur: blur(1px);
+    --switch-img: url(./assets/moon-stars.svg);
+    --button-right: 0;
+}
+body {
+    /* background
+    background-image: url(./assets/bg-mobile.jpg);
+    background-repeat: no-repeat;
+    background-position: top center;
+    background-size: cover;
+    */
+    /* background color image repeat position/size */
+    background: var(--background-img) repeat top center/cover;
+    /* width: 100%; */
+    height: 100vh;
+    backdrop-filter: var(--backdrop-blur);
+    --webkit-background-filter: var(--backdrop-blur);
+    /* padding: 10px; */
+    /* -webkit-filter: blur(15px); */
+    /* filter: blur(15px); */
+
+}
+
+body * {
+    font-family: "Noto Sans", sans-serif;
+    color: var(--text-color);
+}
+
+#container {
+    /* width: 100%; */
+    /* height: 712px; */
+    /* border: 1px solid red; */
+    /* max-width: 588px; */
+    margin: 20px;
+    /* padding: 100px; */
+    padding: 20px;
+}
+
+#profile {
+    height: 160px;
+    /* border: 1px solid red; */
+    margin: auto;
+    text-align: center;
+    padding: 20px;
+    max-width: 70%;
+}
+#profile img {
+    height: 110px;
+    margin: auto;
+    border: 2px solid var(--text-color);
+    border-radius: 60px;
+    display: block;
+    padding: 4px;
+}
+#profile p {
+    font-weight: 550;
+    font-size: 16px;
+    line-height: 24px;
+    margin-top: 8px;
+    /* padding: 4px; */
+}
+/* switch */
+#switch {
+    /* border: solid red; */
+    width: 64px;
+    height: 24px;
+    position: relative;
+    margin: auto;
+
+}
+#switch button {
+    width: 32px;
+    height: 32px;
+    background: white var(--switch-img) no-repeat center;
+    border: 0;
+    border-radius: 50%;
+    position: absolute;
+    z-index: 1;
+    top: 50%;
+    /* right: 100; */
+    right: var(--button-right);
+    transform: translateY(-50%);
+
+
+}
+#switch span {
+    display: block;
+    width: 64px;
+    height: 24px;
+    background: var(--background-ul-li-a);
+    border: 1px solid var(--background-ul-li-a-border);
+    /* border-radius: 50%; */
+    backdrop-filter: blur(4px);
+    --webkit-backdrop-filter: blur(4px);
+    border-radius: 99px;
+}
+/* links */
+ul {
+    list-style: none;
+    margin: auto;
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    gap: 16px;
+    /* max-width: 70%; */
+    /* display: block; */
+
+    /* border: 1px solid red; */
+    padding: 24px;
+
+}
+ul li a{
+    background: var(--background-ul-li-a);
+    border: 1px solid var(--background-ul-li-a-border);
+    border-radius: 8px;
+
+    display: flex;
+    margin: auto;
+    justify-content: center;
+    /* height: 52px; */
+    align-items: center;
+    padding: 16px;
+    max-width: 80%;
+
+    backdrop-filter: blur(6px);
+    --webkit-background-filter: blur(6px);
+
+    text-decoration: none;
+    text-rendering: auto;
+    font-weight: 600;
+
+    transition: background 2s;
+}
+
+/* pseudo-selector */
+ul li a:hover {
+    background-color: rgba(200, 200, 255, 0.05);
+    border: 1.5px solid rgba(200, 200, 255, 1);
+    transition: background 0.2s;
+}
+
+#social-media {
+    display: flex;
+    /* margin: auto; */
+    align-items: center;
+
+    justify-content: center;
+    gap: 32px;
+    padding: 24px 0;
+    font-size: 24px;
+}
+#social-media a:hover {
+    /* background: rgba(200, 200, 255, 0.2); */
+    border-radius: 50%;
+    /* gap: 12px; */
+    padding: 16px;
+    font-size: 40px;
+    /* transition: background 0.2s; */
+}
+footer {
+    text-align: center;
+}
